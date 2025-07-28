@@ -19,6 +19,11 @@ class Room(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     
+    # Meta is used to configure or change Models and Model forms
+    # if '-' given to the attribute then it will be in ascending
+    class Meta:
+        ordering = ['-updated', '-created']
+    
     def __str__(self):
         return str(self.name)
     

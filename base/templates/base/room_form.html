@@ -5,7 +5,8 @@
 <div>
   <form method="POST" action="">
     {% csrf_token %}
-
+    <!-- form from ModelForm using Room Model-->
+    {{form.as_p}} 
     <input type="submit" value="Submit" />
   </form>
 </div>
